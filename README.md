@@ -3,5 +3,4 @@
 3) Import database myProject_loc.sql 
 4) Upload the project to any server and run :>
 
-!!!
-To access the administration panel, log in - asdasd@mail.ru and password - 12345678
+!!! To access the administration panel, log in - asdasd@mail.ru and password - 12345678 !!!
