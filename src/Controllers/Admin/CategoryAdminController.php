@@ -23,7 +23,7 @@ class CategoryAdminController extends Controller {
                 => $e->getMessage(), 'categories' => Category::getCategories()]);
                 return;
             }
-            header('Location: /myProject2.loc/admin/category/all', true, 302);
+            header('Location: /admin/category/all', true, 302);
             exit();
         }
         $this->view->renderAdmin('Admin/Category/add.php', ['categories' => Category::getCategories()]);
@@ -50,7 +50,7 @@ class CategoryAdminController extends Controller {
                     => $e->getMessage(), 'category' => $category]);
                     return;
                 }
-                header('Location: /myProject2.loc/admin/category/all');
+                header('Location: /admin/category/all');
                 exit();
             }
             $this->view->renderAdmin('Admin/Category/edit.php', ['category' => $category]);
@@ -63,6 +63,6 @@ class CategoryAdminController extends Controller {
         }
         $category->delete();
 
-        header('Location: /myProject2.loc/admin/category/all');
+        header('Location: /admin/category/all');
     }
 }

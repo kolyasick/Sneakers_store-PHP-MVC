@@ -4,7 +4,7 @@
         <h1 style="padding-top: 1.3em;" class="text-5xl font-bold">Магазин лучших кроссовок</h1>
         <p class="text-xl mt-8">Мы позиционируемся на продаже самых брендированных и качественных кроссовок во всем мире!</p>
         <div class="flex gap-4 mt-10 items-center absolute bottom-10">
-            <a class="border border-slate-200 p-4 rounded-md" href="/myProject2.loc/product/all">Каталог товаров</a>
+            <a class="border border-slate-200 p-4 rounded-md" href="/product/all">Каталог товаров</a>
            
             <a class="" href="">О нас</a>
         </div>
@@ -29,8 +29,8 @@
     foreach ($products as $product) : 
 ?>
     <div class="relative bg-white border border-slate-200 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl">
-                <img src="/myProject2.loc/public/like-1.svg" alt="Like 1" class="absolute top-8 left-8">
-                <a href="/myProject2.loc/product/<?= $product->getId() ?>"><img src="/myProject2.loc/public/sneakers/<?= $product->getImg() ?>" alt="Sneaker"></a>
+                <img src="/public/like-1.svg" alt="Like 1" class="absolute top-8 left-8">
+                <a href="/product/<?= $product->getId() ?>"><img src="/public/sneakers/<?= $product->getImg() ?>" alt="Sneaker"></a>
                 <p class="mt-2 font-semibold"><?= $product->getTitle() ?></p>
                 <p><?= $product->getContent() ?></p>
                 <div class="flex justify-between mt-5">
@@ -40,8 +40,8 @@
                         <s class="text-red-700"><?= $product->getOldPrice() ?></s>
                     </div>
                     <a class="addToCart" 
-                        href="<?= (isset($_SESSION['cart'][$product->getId()])) ? "/myProject2.loc/cart/delete-from-cart/" . $product->getId() : "/myProject2.loc/cart/add-to-cart/" . $product->getId() ?>">
-                        <img src="<?= (isset($_SESSION['cart'][$product->getId()])) ? "/myProject2.loc/public/checked.svg" : "/myProject2.loc/public/plus.svg" ?>" alt="Plus">
+                        href="<?= (isset($_SESSION['cart'][$product->getId()])) ? "/cart/delete-from-cart/" . $product->getId() : "/cart/add-to-cart/" . $product->getId() ?>">
+                        <img src="<?= (isset($_SESSION['cart'][$product->getId()])) ? "/public/checked.svg" : "/public/plus.svg" ?>" alt="Plus">
                     </a>
                 </div>
             </div>
@@ -57,8 +57,8 @@
 <h1 class="font-bold text-4xl my-10 text-slate-700">Категории товаров</h1>
 <div class="flex mb-5 gap-3 mx-auto items-center justify-evenly">
 <?php foreach ($categories as $category) : ?>
-   <a class="w-1/4 hover:bg-gray-300 transition border rounded-md border-gray-400 p-3 mb-2 text-center" href="/myProject2.loc/categories/<?= $category->getId() ?>">
-    <div class="/myProject2.loc/categories/<?= $category->getId() ?>">
+   <a class="w-1/4 hover:bg-gray-300 transition border rounded-md border-gray-400 p-3 mb-2 text-center" href="/categories/<?= $category->getId() ?>">
+    <div class="/categories/<?= $category->getId() ?>">
             <h2 class="category-title text-2xl font-bold mb-2 text-gray-700"><p><?= $category->getTitle() ?></p></h2>
             <p><?= $category->getDescription()?></p>
         </div>
@@ -82,11 +82,11 @@
         <h2 class="font-semibold text-lg text-center mb-5"><?= $review->getName() ?></h2>
         <p class="mb-5"><?= $review->getText() ?></p>
         <img width="100" class="absolute -bottom-7 left-2 text-start" src="
-        <?= ($review->getRating() == 1) ? '/myProject2.loc/public/1r.png' : '' ?>
-        <?= ($review->getRating() == 2) ? '/myProject2.loc/public/2r.png' : '' ?>
-        <?= ($review->getRating() == 3) ? '/myProject2.loc/public/3r.png' : '' ?>
-        <?= ($review->getRating() == 4) ? '/myProject2.loc/public/4r.png' : '' ?>
-        <?= ($review->getRating() == 5) ? '/myProject2.loc/public/5r.png' : '' ?>
+        <?= ($review->getRating() == 1) ? '/public/1r.png' : '' ?>
+        <?= ($review->getRating() == 2) ? '/public/2r.png' : '' ?>
+        <?= ($review->getRating() == 3) ? '/public/3r.png' : '' ?>
+        <?= ($review->getRating() == 4) ? '/public/4r.png' : '' ?>
+        <?= ($review->getRating() == 5) ? '/public/5r.png' : '' ?>
         " alt="">
     </div>
               
@@ -110,7 +110,7 @@ $hasEmail = checkEmail($orders, $emailToCheck);
 ?>
 
   <?php if (!empty($user && $hasEmail)): ?>
-  <a class="border border-slate-400 p-3 rounded-md hover:bg-slate-400 transition" href="/myProject2.loc/review/add">Добавить отзыв</a>
+  <a class="border border-slate-400 p-3 rounded-md hover:bg-slate-400 transition" href="/review/add">Добавить отзыв</a>
   <?php endif; ?>
 </section>
 

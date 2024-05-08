@@ -5,13 +5,13 @@
             <a href=""></a>
         </li>
         <li>
-            <a class="" href="/myProject2.loc">Главная</a>
+            <a class="" href="">Главная</a>
         </li>
         <li>
            >
         </li>
         <li>
-            <a class="" href="/myProject2.loc/product/all">Категории</a>
+            <a class="" href="/product/all">Категории</a>
         </li>
         <li>
            >
@@ -19,7 +19,7 @@
             <?php foreach($categories as $c): ?>
                 <?php if ($_GET['route'] == 'categories/' . $c->getId()) : ?>
             <li>
-                <a class="text-gray-400" href="/myProject2.loc/categories/<?= $c->getId()?>"><?= $c->getTitle()  ?> </a>
+                <a class="text-gray-400" href="/categories/<?= $c->getId()?>"><?= $c->getTitle()  ?> </a>
             </li>
             <?php endif ?>
             <?php endforeach; ?>
@@ -27,12 +27,12 @@
             <?php foreach($subcategories as $s): ?>
                 <?php if ($_GET['route'] == 'categories/' . $s->getId()) : ?>
             <li>
-                <a class="" href="/myProject2.loc/categories/<?= $s->getParentId()?>">
+                <a class="" href="/categories/<?= $s->getParentId()?>">
                     <?php foreach($categories as $b): ?>
                         <?php if($b->getId() == $s->getParentId()) : ?>
                     <?= $b->getTitle() ?> </a> 
                     <li>></li>
-                    <a class="text-gray-400" href="/myProject2.loc/categories/<?= $b->getId()?>"><?= $s->getTitle()  ?> </a> 
+                    <a class="text-gray-400" href="/categories/<?= $b->getId()?>"><?= $s->getTitle()  ?> </a> 
                     <?php endif ?>
                     <?php endforeach ?>
             </li>
@@ -84,8 +84,8 @@
             $productsFound = true; 
 ?> 
             <div class="relative bg-white border border-slate-200 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl">
-                <img src="/myProject2.loc/public/like-1.svg" alt="Like 1" class="absolute top-8 left-8">
-                <a href="/myProject2.loc/product/<?= $product->getId() ?>"><img src="/myProject2.loc/public/sneakers/<?= $product->getImg() ?>" alt="Sneaker"></a>
+                <img src="/public/like-1.svg" alt="Like 1" class="absolute top-8 left-8">
+                <a href="/product/<?= $product->getId() ?>"><img src="/public/sneakers/<?= $product->getImg() ?>" alt="Sneaker"></a>
                 <p class="mt-2 font-semibold"><?= $product->getTitle() ?></p>
                 <p><?= $product->getContent() ?></p>
                 <div class="flex justify-between mt-5">
@@ -96,10 +96,10 @@
                     </div>
                     <a class="addToCart" 
                         href="
-                        <?= (isset($_SESSION['cart'][$product->getId()])) ? "/myProject2.loc/cart/delete-from-cart/" . $product->getId() : "/myProject2.loc/cart/add-to-cart/" . $product->getId() ?>">
+                        <?= (isset($_SESSION['cart'][$product->getId()])) ? "/cart/delete-from-cart/" . $product->getId() : "/cart/add-to-cart/" . $product->getId() ?>">
                         <img 
                         src=
-                        "<?= (isset($_SESSION['cart'][$product->getId()])) ? "/myProject2.loc/public/checked.svg" : "/myProject2.loc/public/plus.svg" ?>" alt="Plus">
+                        "<?= (isset($_SESSION['cart'][$product->getId()])) ? "/public/checked.svg" : "/public/plus.svg" ?>" alt="Plus">
                     </a>
                 </div>
             </div>
@@ -115,7 +115,7 @@
 
 <!-- <div class="w-full mx-auto">
     <p class="font-semibold mt-5 text-center">В этой категории нет товаров</p>
-    <img class="mx-auto mt-3" src="/myProject2.loc/public/emoji-1.png" width="80" alt="">
+    <img class="mx-auto mt-3" src="/public/emoji-1.png" width="80" alt="">
 </div> -->
 <?php endif; ?>
 

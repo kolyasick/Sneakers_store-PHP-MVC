@@ -30,7 +30,7 @@ class MainController extends Controller {
                 => $e->getMessage()]);
                 return;
             }
-            header('Location: /myProject2.loc/#reviews', true, 302);
+            header('Location: /#reviews', true, 302);
             exit();
         } $this->view->renderHtml('Reviews/add.php', ['review' => Review::findAll()]);
         

@@ -9,16 +9,16 @@
       foreach ($reviews as $review) : 
   ?>
   <?php if ($review->getIsConfirmed() == 0): ?>
-    <a href="/myProject2.loc/admin/review/<?= $review->getId() ?>/view" class="">
+    <a href="/admin/review/<?= $review->getId() ?>/view" class="">
     <div class="relative bg-white border border-slate-400 rounded-md p-8 text-center mb-10 transition hover:-translate-y-2 hover:shadow-xl">
         <h2 class="font-semibold text-lg text-center mb-5"><?= $review->getName() ?></h2>
         <p class="mb-5 w-full"><?= $review->getText() ?></p>
         <img width="100" class="absolute -bottom-7 left-2 text-start" src="
-        <?= ($review->getRating() == 1) ? '/myProject2.loc/public/1r.png' : '' ?>
-        <?= ($review->getRating() == 2) ? '/myProject2.loc/public/2r.png' : '' ?>
-        <?= ($review->getRating() == 3) ? '/myProject2.loc/public/3r.png' : '' ?>
-        <?= ($review->getRating() == 4) ? '/myProject2.loc/public/4r.png' : '' ?>
-        <?= ($review->getRating() == 5) ? '/myProject2.loc/public/5r.png' : '' ?>
+        <?= ($review->getRating() == 1) ? '/public/1r.png' : '' ?>
+        <?= ($review->getRating() == 2) ? '/public/2r.png' : '' ?>
+        <?= ($review->getRating() == 3) ? '/public/3r.png' : '' ?>
+        <?= ($review->getRating() == 4) ? '/public/4r.png' : '' ?>
+        <?= ($review->getRating() == 5) ? '/public/5r.png' : '' ?>
         " alt="">
     </div>
     </a>           

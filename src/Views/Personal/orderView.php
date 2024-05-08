@@ -1,25 +1,25 @@
 <div class="text-center w-full mx-auto">
     <ul class="flex gap-1 items-center justify-center">
         <li>
-            <a class="" href="/myProject2.loc/">Главная</a>
+            <a class="" href="/">Главная</a>
         </li>
         <li>
            >
         </li>
         <li>
-            <a class="" href="/myProject2.loc/personal">Профиль</a>
+            <a class="" href="/personal">Профиль</a>
         </li>
         <li>
            >
         </li>
         <li>
-            <a class="" href="/myProject2.loc/personal/orders">Заказы</a>
+            <a class="" href="/personal/orders">Заказы</a>
         </li>
         <li>
            >
         </li>
         <li>
-            <a class="text-gray-400" href="/myProject2.loc/product/all">Подробнее</a>
+            <a class="text-gray-400" href="/product/all">Подробнее</a>
         </li>
     </ul>
 </div>
@@ -59,8 +59,8 @@
 
     <?php foreach($productsss as $product) : ?>
       <div class="relative bg-white border border-slate-200 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl">
-                <img src="/myProject2.loc/public/like-1.svg" alt="Like 1" class="absolute top-8 left-8">
-                <a href="/myProject2.loc/product/<?= $product->getId() ?>"><img src="/myProject2.loc/public/sneakers/<?= $product->getImg() ?>" alt="Sneaker"></a>
+                <img src="/public/like-1.svg" alt="Like 1" class="absolute top-8 left-8">
+                <a href="/product/<?= $product->getId() ?>"><img src="/public/sneakers/<?= $product->getImg() ?>" alt="Sneaker"></a>
                 <p class="mt-2 font-semibold"><?= $product->getTitle() ?></p>
                 <p><?= $product->getContent() ?></p>
                 <div class="flex justify-between mt-5">

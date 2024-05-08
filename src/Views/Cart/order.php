@@ -16,7 +16,7 @@
         <h2 class="text-2xl font-bold mb-5">Ваш заказ</h2>
     </div>
     <div class="flex gap-5">
-    <form class="border border-gray-300 border rounded-xl w-2/3 p-5 inline-block" action="/myProject2.loc/cart/order/post" method="POST">
+    <form class="border border-gray-300 border rounded-xl w-2/3 p-5 inline-block" action="/cart/order/post" method="POST">
         <input class="bg-gray-200 w-full border rounded-md p-2" type="text" placeholder="ФИО" name="name" value="">
         <input class="bg-gray-200 w-full rounded-md p-2 mt-5" type="e-mail" placeholder="e-mail" name="email" value="">
         <input class="bg-gray-200 w-full rounded-md p-2 mt-5" type="tel" placeholder="Телефон" name="phone" value="">
@@ -36,7 +36,7 @@
     <?php foreach ($_SESSION['cart'] as $key => $value): ?>
         <?php if (!$value['qty'] == 0)  : ?>
             <div class="card flex items-center border border-slate-200 p-4 rounded-xl gap-4">
-                <img src="/myProject2.loc/public/sneakers/<?= $value['img']; ?>" class="w-25 h-20">
+                <img src="/public/sneakers/<?= $value['img']; ?>" class="w-25 h-20">
                 <div class="flex flex-col">
                     <p class="mt-2"><?=  $value['title']; ?></p>
                     <div class="flex justify-between mt-2">
@@ -44,7 +44,7 @@
                     </div>
                     <p><?= $value['qty'] ?> шт.</p>
                 </div>
-                <img class="close-img opacity-40 hover:opacity-100 cursor-pointer transition" src="/myProject2.loc/public/close.svg">
+                <img class="close-img opacity-40 hover:opacity-100 cursor-pointer transition" src="/public/close.svg">
             </div>
         <?php endif; ?>
     <?php endforeach; ?>
@@ -54,7 +54,7 @@
                 <p class="mt-6 font-semibold">Есть промокод на скидку?</p>
                 <div class="flex gap-2 align-center"> 
                     <input class="bg-gray-200 w-2/3 border rounded-md mt-2 p-2" type="text" placeholder="Ввести промокод" name="name" value="">
-                    <img class="-ms-11 mt-2" src="/myProject2.loc/public/checked.svg" alt="">
+                    <img class="-ms-11 mt-2" src="/public/checked.svg" alt="">
                 </div>
             </div>
             <div class="flex gap-2 justify-self-end">
@@ -89,7 +89,7 @@
         <h2 class="text-2xl font-bold mb-5">Ваш заказ</h2>
     </div>
     <div class="flex gap-5">
-    <form class="border border-gray-300 border rounded-xl w-2/3 p-5 inline-block" action="/myProject2.loc/cart/order/post" method="POST">
+    <form class="border border-gray-300 border rounded-xl w-2/3 p-5 inline-block" action="/cart/order/post" method="POST">
         <input class="bg-gray-200 w-full border rounded-md p-2" type="text" placeholder="ФИО" name="name" value="">
         <input class="bg-gray-200 w-full rounded-md p-2 mt-5" type="e-mail" placeholder="e-mail" name="email" value="">
         <input class="bg-gray-200 w-full rounded-md p-2 mt-5" type="tel" placeholder="Телефон" name="phone" value="">
@@ -113,7 +113,7 @@
                 <p class="mt-6 font-semibold">Есть промокод на скидку?</p>
                 <div class="flex gap-2 align-center"> 
                     <input class="bg-gray-200 w-2/3 border rounded-md mt-2 p-2" type="text" placeholder="Ввести промокод" name="name" value="">
-                    <img class="-ms-11 mt-2" src="/myProject2.loc/public/checked.svg" alt="">
+                    <img class="-ms-11 mt-2" src="/public/checked.svg" alt="">
                 </div>
             </div>
             <div class="flex gap-2 justify-self-end">

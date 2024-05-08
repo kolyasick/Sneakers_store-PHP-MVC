@@ -26,7 +26,7 @@ class UsersController extends Controller {
             try {
                 $user = User::login($_POST);
                 GlobalUserAuthService::createToken($user);
-                header('Location: /myProject2.loc/');
+                header('Location: /');
                 exit;
             } catch (InvalidArgumentException $e) {
                 $this->view->renderHTML('users/login.php', ['error' => $e->getMessage()]);
@@ -39,6 +39,6 @@ class UsersController extends Controller {
 
     public function logout() {
         setcookie('token', '', -1, '/', '', false, true);
-        header('Location: /myProject2.loc/' );
+        header('Location: /' );
     }   
 }

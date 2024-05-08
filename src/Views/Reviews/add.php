@@ -2,7 +2,7 @@
 <?php if(!empty($error)): ?>
     <div class="bg-red-400 p-3 border border-red-400 inline-block"><?= $error?></div>
     <?php endif; ?> 
-<form class="w-1/3" action="/myProject2.loc/review/add" method="post" class="w-2/4">
+<form class="w-1/3" action="/review/add" method="post" class="w-2/4">
 <br>
     <label class="font-semibold" for="name">Ваше имя</label><br>
     <input class="border border-gray-400 border rounded-md w-full p-1" placeholder="Иван" type="text" name="name" value="<?= $_POST['name'] ?? '' ?>" size="50"><br>

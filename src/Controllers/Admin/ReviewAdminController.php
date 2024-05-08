@@ -38,7 +38,7 @@ class ReviewAdminController extends Controller {
                 => $e->getMessage(), 'review' => $review]);
                 return;
             }
-            header('Location: /myProject2.loc/admin/review/all');
+            header('Location: /admin/review/all');
             exit();
         }
         $this->view->renderAdmin('Admin/Review/view.php', ['review' => $review]);
@@ -50,6 +50,6 @@ class ReviewAdminController extends Controller {
             throw new NotFoundException();
         }
         $review->delete();
-        header('Location: /myProject2.loc/admin/review/all');
+        header('Location: /admin/review/all');
     }
 }

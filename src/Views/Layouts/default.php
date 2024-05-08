@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/myProject2.loc/css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Sneakers</title>
 </head>
@@ -13,10 +13,10 @@
     
     <header class="flex justify-between border-b border-slate-200 px-10 py-8 container mx-auto">
         <div class="flex items-center gap-4">
-        <img src="/myProject2.loc/public/logo.png" alt="Logo" class="w-10">
+        <img src="/public/logo.png" alt="Logo" class="w-10">
         <div class="">
             <h2 class="text-xl font-bold uppercase">
-            <a href="/myProject2.loc/">PHP Sneakers</a>
+            <a href="/">PHP Sneakers</a>
             </h2>
             <p class="text-slate-400">Магазин лучших кроссовок</p>
         </div>
@@ -25,30 +25,30 @@
         <ul class="flex items-center gap-10">
             <?php if (!empty($user) && $user->getRole() == 'admin') : ?>
                 <li class="flex items-center gap-3 cursor-pointer text-gray-500 hover:text-black">
-                    <a class="flex items-center gap-3" href="/myProject2.loc/admin">
+                    <a class="flex items-center gap-3" href="/admin">
                         <b class="cart">-> Админ-панель</b>
                     </a>
                 </li>
             <?php endif ?>
 
             <li class="flex items-center gap-3 cursor-pointer text-gray-500 hover:text-black">
-                <a class="flex items-center gap-3" href="/myProject2.loc/cart">
-                    <img src="/myProject2.loc/public/cart.svg" alt="Cart">
+                <a class="flex items-center gap-3" href="/cart">
+                    <img src="/public/cart.svg" alt="Cart">
                     <b class="cart">Корзина</b>
                 </a>
             </li>
 
             <li class="flex items-center gap-3 cursor-pointer text-gray-500 hover:text-black">
-                <img src="/myProject2.loc/public/profile.svg" alt="Profile">
+                <img src="/public/profile.svg" alt="Profile">
                 <span>
-                    <a href="/myProject2.loc/<?= !empty($user) ? 'personal' : 'users/login' ?>" class="fs-6 btn btn-outline-success text-success btn-profile"> 
+                    <a href="/<?= !empty($user) ? 'personal' : 'users/login' ?>" class="fs-6 btn btn-outline-success text-success btn-profile"> 
                         <?= !empty($user) ? 'Привет, ' . $user->getNickname() : 'Войдите на сайт' ?>
                     </a>
                 </span>
             </li>
             <li class="gap-3 cursor-pointer text-red-500 hover:text-black">
                 <span>
-                    <a class="" href='<?= !empty($user) ? '/myProject2.loc/users/logout' : '#' ?>'>
+                    <a class="" href='<?= !empty($user) ? '/users/logout' : '#' ?>'>
                         <?= !empty($user) ? 'Выйти' : '' ?>
                     </a>
                 </span>
@@ -70,8 +70,8 @@
                 </select>
 
                 <div class="relative">
-                    <img class="absolute left-4 top-3" src="/myProject2.loc/public/search.svg" alt="Search">
-                    <form action='/myProject2.loc/search?='<?= isset($_GET['q']) ? $_GET['q'] : ''; ?> >
+                    <img class="absolute left-4 top-3" src="/public/search.svg" alt="Search">
+                    <form action='/search?='<?= isset($_GET['q']) ? $_GET['q'] : ''; ?> >
                     <input id="search-input" value="<?= isset($_GET['q']) ? $_GET['q'] : ''; ?>" name="q" class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400 transition" placeholder="Поиск...">
                     </form>
                 </div>
@@ -123,6 +123,6 @@
     </div>
 </div>
 
-      <script src="/myProject2.loc/js/main.js"></script>
+      <script src="/js/main.js"></script>
 </body>
 </html>

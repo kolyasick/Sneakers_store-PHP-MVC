@@ -26,7 +26,7 @@ class ProductAdminController extends Controller {
                 => $e->getMessage(),'categories' => Category::getCategories()]);
                 return;
             }
-            header('Location: /myProject2.loc/admin/product/all', true, 302);
+            header('Location: /admin/product/all', true, 302);
             exit();
         }
         $this->view->renderAdmin('Admin/Product/add.php', ['categories' => Category::getCategories()]);
@@ -47,7 +47,7 @@ class ProductAdminController extends Controller {
             throw new NotFoundException();
         }
         $product->delete();
-        header('Location: /myProject2.loc/admin/product/all');
+        header('Location: /admin/product/all');
     }
 
     public function edit(int $id): void {
@@ -65,7 +65,7 @@ class ProductAdminController extends Controller {
                 => $e->getMessage(), 'product' => $product]);
                 return;
             }
-            header('Location: /myProject2.loc/admin/product/all');
+            header('Location: /admin/product/all');
             exit();
         }
         $this->view->renderAdmin('Admin/Product/edit.php', ['product' => $product, 'categories' => $categories, 'category_once' => $category]);

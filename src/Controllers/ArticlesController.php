@@ -50,7 +50,7 @@ class ArticlesController extends Controller {
                 => $e->getMessage(), 'article' => $article]);
                 return;
             }
-            header('Location: /myProject2.loc/articles/' . $article->getId(), true, 302);
+            header('Location: /articles/' . $article->getId(), true, 302);
             exit();
         }
         $this->view->renderHtml('articles/edit.php', ['article' => $article]);

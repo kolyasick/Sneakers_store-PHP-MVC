@@ -2,7 +2,7 @@
 <?php if(!empty($error)): ?>
     <div class="bg-red p-3 border border-red-300"><?= $error?></div>
     <?php endif; ?> 
-<form action="/myProject2.loc/admin/category/<?= $category->getId() ?>/edit" method="post" class="w-2/4">
+<form action="/admin/category/<?= $category->getId() ?>/edit" method="post" class="w-2/4">
     <label class="font-semibold" for="name">Название категории</label><br>
     <input class="border border-gray-400 border rounded-md w-full p-1" type="text" name="title" id="title" value="<?= $_POST['title'] ?? $category->getTitle() ?>" size="50"><br>
     <br>

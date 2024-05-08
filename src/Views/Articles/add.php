@@ -2,7 +2,7 @@
 <?php if(!empty($error)): ?>
     <div style="backround-color: red"><?= $error?></div>
     <?php endif; ?>
-<form action="/myProject2.loc/articles/add" method="post">
+<form action="/articles/add" method="post">
     <label class="font-semibold" for="name">Название статьи</label><br>
     <input class="border border-gray-400 border rounded-md" type="text" name="name" id="name" value="<?= $_POST['name'] ?? '' ?>" size="50"><br>
     <br>

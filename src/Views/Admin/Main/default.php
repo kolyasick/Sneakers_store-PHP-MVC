@@ -16,10 +16,10 @@
     
     <header class="flex justify-between border-b border-slate-200 px-10 py-8 container mx-auto">
         <div class="flex items-center gap-4">
-        <img src="/myProject2.loc/public/logo.png" alt="Logo" class="w-10">
+        <img src="/public/logo.png" alt="Logo" class="w-10">
         <div class="">
             <h2 class="text-xl font-bold uppercase">
-            <a href="/myProject2.loc/">PHP Sneakers</a>
+            <a href="/">PHP Sneakers</a>
             </h2>
             <p class="text-slate-400">Магазин лучших кроссовок</p>
         </div>
@@ -28,16 +28,16 @@
         <ul class="flex items-center gap-10">
 
             <li class="flex items-center gap-3 cursor-pointer text-gray-500 hover:text-black">
-                <img src="/myProject2.loc/public/profile.svg" alt="Profile">
+                <img src="/public/profile.svg" alt="Profile">
                 <span>
-                    <a href="/myProject2.loc/users/login" class="fs-6 btn btn-outline-success text-success btn-profile"> 
+                    <a href="/users/login" class="fs-6 btn btn-outline-success text-success btn-profile"> 
                         <?= !empty($user) ? 'Привет, ' . $user->getNickname() : 'Войдите на сайт' ?>
                     </a>
                 </span>
             </li>
             <li class="gap-3 cursor-pointer text-red-500 hover:text-black">
                 <span>
-                    <a class="" href='<?= !empty($user) ? '/myProject2.loc/users/logout' : '#' ?>'>
+                    <a class="" href='<?= !empty($user) ? '/users/logout' : '#' ?>'>
                         <?= !empty($user) ? 'Выйти' : '' ?>
                     </a>
                 </span>
@@ -55,16 +55,16 @@
             <div style="min-height: 600px;" class="w-1/4 h-auto border border-slate-400 rounded-md mr-5 bg-gray-700">
                 <ul class="text-gray-200 text-center">
                     <li class="border-b border-slate-400 p-2 rounded- hover:bg-slate-600 transition <?= (strpos($_GET['route'], 'admin/category/') !== false) ? 'bg-slate-600' : '' ?>">
-                        <a class="block" href="/myProject2.loc/admin/category/all">Категории</a>
+                        <a class="block" href="/admin/category/all">Категории</a>
                     </li>
                     <li class="border-b border-slate-400 p-2 rounded- hover:bg-slate-600 transition <?= (strpos($_GET['route'], 'admin/product/') !== false) ? 'bg-slate-600' : '' ?>">
-                        <a class="block" href="/myProject2.loc/admin/product/all">Товары</a>
+                        <a class="block" href="/admin/product/all">Товары</a>
                     </li>
                     <li class="border-b border-slate-400 p-2 rounded- hover:bg-slate-600 transition <?= (strpos($_GET['route'], 'admin/order/') !== false) ? 'bg-slate-600' : '' ?>">
-                        <a class="block" href="/myProject2.loc/admin/order/all">Заказы</a>
+                        <a class="block" href="/admin/order/all">Заказы</a>
                     </li>
                     <li class="border-b border-slate-400 p-2 rounded- hover:bg-slate-600 transition <?= (strpos($_GET['route'], 'admin/reviews/') !== false) ? 'bg-slate-600' : '' ?>">
-                        <a class="block" href="/myProject2.loc/admin/review/all">Отзывы</a>
+                        <a class="block" href="/admin/review/all">Отзывы</a>
                     </li>
                 </ul>
             </div>
@@ -83,5 +83,5 @@
     </div>
 </div>
 </body>
-<script src="/myProject2.loc/js/main.js"></script>
+<script src="/js/main.js"></script>
 </html>

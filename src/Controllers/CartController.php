@@ -17,7 +17,7 @@ class CartController extends Controller {
         }
         $cart = new Cart();
         $cart->addToCart($product);
-        header('Location: /myProject2.loc/cart');
+        header('Location: /cart');
     } 
 
     public function addInCart($id){
@@ -27,7 +27,7 @@ class CartController extends Controller {
         }
         $cart = new Cart();
         $cart->addToCart($product);
-        header('Location: /myProject2.loc/product/all');
+        header('Location: /product/all');
     } 
 
     public function delItem($id){
@@ -41,7 +41,7 @@ class CartController extends Controller {
         if ($_SESSION['cart'][$id]['qty'] < 1) {
             unset($_SESSION['cart'][$id]);
         } 
-        header('Location: /myProject2.loc/cart');
+        header('Location: /cart');
     }
 
     public function deleteInCart($id) {
@@ -49,18 +49,18 @@ class CartController extends Controller {
         $cart = new Cart();
         $cart->addToCart($product, -$_SESSION['cart'][$id]['qty']);
         unset($_SESSION['cart'][$id]);
-        header('Location: /myProject2.loc/cart');
+        header('Location: /cart');
     }
 
     public function deleteInProducts($id) {
         unset($_SESSION['cart'][$id]);
-        header('Location: /myProject2.loc/');
+        header('Location: /');
     }
 
     public function clear() {
         unset($_SESSION['cart']);
         unset($_SESSION['cart.sum']);
-        header('Location: /myProject2.loc/cart');
+        header('Location: /cart');
     }
     public function view() {
         

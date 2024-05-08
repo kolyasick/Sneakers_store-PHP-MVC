@@ -1,13 +1,13 @@
 <div class="text-center w-full mx-auto">
     <ul class="flex gap-1 items-center justify-center">
     <li>
-            <a class="" href="/myProject2.loc/">Главная</a>
+            <a class="" href="/">Главная</a>
         </li>
         <li>
            >
         </li>
         <li>
-            <a class="" href="/myProject2.loc/personal">Профиль</a>
+            <a class="" href="/personal">Профиль</a>
         </li>
         <li>
            >
@@ -46,19 +46,19 @@
       <td class="border border-slate-400 px-2 py-3 w-1/8"><?= ($order->getQty() == null) ? 0 : $order->getQty() ?></td>
       <td class="border border-slate-400 px-2 py-3 w-1/8"><?= number_format($order->getTotal()) ?> руб.</td>  
       <td class=" flex justify-center border-y-0 px-2 py-3 w-1/8 text-center">
-        <img width="30" src="/myProject2.loc/public/<?= ($order->getStatus() == 0) ? 'time-left.png' : 'checked.svg' ?>" alt="">
+        <img width="30" src="/public/<?= ($order->getStatus() == 0) ? 'time-left.png' : 'checked.svg' ?>" alt="">
       </td>
     </tr>
     <?php endforeach ?>
 </table>
 
-<a class=" mt-10 border border-slate-400 p-3 hover:bg-slate-400 transition" href="/myProject2.loc/personal/<?= $order->getId() ?>/orders/view">
+<a class=" mt-10 border border-slate-400 p-3 hover:bg-slate-400 transition" href="/personal/<?= $order->getId() ?>/orders/view">
   Подробнее
 </a>
 <?php else: ?>
   <div class="flex flex-col items-center ">
         <h2 class=" text-3xl font-semibold text-red-500">У вас нет заказов</h2>
-        <img class="mt-7" width="100" src="/myProject2.loc/public/emoji-2.png" alt="">
-        <a style="text-decoration: none" class="text-blue-500 underline bg-blue-200 p-3 rounded mt-5" href="/myProject2.loc">Набрать товаров</a>
+        <img class="mt-7" width="100" src="/public/emoji-2.png" alt="">
+        <a style="text-decoration: none" class="text-blue-500 underline bg-blue-200 p-3 rounded mt-5" href="">Набрать товаров</a>
     </div>
 <?php endif; ?>

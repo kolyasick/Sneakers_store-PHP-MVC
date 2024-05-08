@@ -23,7 +23,7 @@ class OrderAdminController extends Controller {
                 => $e->getMessage()]);
                 return;
             }
-            header('Location: /myProject2.loc/admin/category/all', true, 302);
+            header('Location: /admin/category/all', true, 302);
             exit();
         }
         $this->view->renderAdmin('Admin/Category/add.php', ['categories' => Category::getCategories()]);
@@ -51,7 +51,7 @@ class OrderAdminController extends Controller {
                     => $e->getMessage(), 'order' => $order]);
                     return;
                 }
-                header('Location: /myProject2.loc/admin/order/all');
+                header('Location: /admin/order/all');
                 exit();
             }
             $this->view->renderAdmin('Admin/Order/all.php', ['orders' => $orders, 'order' => $order]);
@@ -64,6 +64,6 @@ class OrderAdminController extends Controller {
         }
         $order->delete();
 
-        header('Location: /myProject2.loc/admin/order/all');
+        header('Location: /admin/order/all');
     }
 }

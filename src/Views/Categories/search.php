@@ -13,8 +13,8 @@
     foreach ($searchProducts as $product) : 
 ?> 
          <div class="relative bg-white border border-slate-200 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl">
-                <img src="/myProject2.loc/public/like-1.svg" alt="Like 1" class="absolute top-8 left-8">
-                <a href="/myProject2.loc/product/<?= $product->getId() ?>"><img src="/myProject2.loc/public/sneakers/<?= $product->getImg() ?>" alt="Sneaker"></a>
+                <img src="/public/like-1.svg" alt="Like 1" class="absolute top-8 left-8">
+                <a href="/product/<?= $product->getId() ?>"><img src="/public/sneakers/<?= $product->getImg() ?>" alt="Sneaker"></a>
                 <p class="mt-2 font-semibold"><?= $product->getTitle() ?></p>
                 <p><?= $product->getContent() ?></p>
                 <div class="flex justify-between mt-5">
@@ -23,7 +23,7 @@
                         <b><?= $product->getPrice() ?> руб.</b>
                         <s><?= $product->getOldPrice() ?></s>
                     </div>
-                    <a class="addToCart" href="/myProject2.loc/cart/add/<?= $product->getId() ?>"><img src="/myProject2.loc/public/plus.svg" alt="Plus"></a>
+                    <a class="addToCart" href="/cart/add/<?= $product->getId() ?>"><img src="/public/plus.svg" alt="Plus"></a>
                 </div>
             </div>
 <?php 

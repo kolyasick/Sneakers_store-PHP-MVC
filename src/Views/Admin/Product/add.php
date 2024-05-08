@@ -2,7 +2,7 @@
 <?php if(!empty($error)): ?>
     <div class="bg-red p-3 border border-red-300"><?= $error?></div>
     <?php endif; ?> 
-<form action="/myProject2.loc/admin/product/add" method="post" class="w-2/4">
+<form action="/admin/product/add" method="post" class="w-2/4">
 <label class="font-semibold" for="name"></label><br>
     
     <label class="font-semibold" for="category_id">Категория товара</label><br>
