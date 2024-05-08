@@ -20,6 +20,4 @@ To access the administration panel, use the following credentials:
 
 ## Additional Information
 
-Please make sure to create a cool and beautiful README file on GitHub. You can use different font sizes and other fun elements to make it stand out.
-
 Thank you for using myProject! 🚀🎉
