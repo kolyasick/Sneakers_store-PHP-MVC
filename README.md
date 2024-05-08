@@ -18,6 +18,6 @@ To access the administration panel, use the following credentials:
 - Email: asdasd@mail.ru
 - Password: 12345678
 
-## Additional Information
+## Thank you for using myProject! 🚀🎉
 
-Thank you for using myProject! 🚀🎉
+
