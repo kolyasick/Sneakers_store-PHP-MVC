@@ -1,0 +1,14 @@
+.cover {
+    background-image: url('/myProject2.loc/public/nike3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: initial;
+    height: 650px;
+  }
+.brends__cover{
+    background-image: url('/myProject2.loc/public/brends.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  height: 350px;
+}
